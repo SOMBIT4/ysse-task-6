@@ -1,0 +1,145 @@
+/* ==========================================================================
+   YSSE Design System Tokens & Global Reset (Emerald & Botanical Green Theme)
+   ========================================================================== */
+
+:root {
+  /* Core Emerald & Botanical Green Palette */
+  --emerald-950: #022c22;
+  --emerald-900: #064e3b;
+  --emerald-800: #065f46;
+  --emerald-700: #047857;
+  --emerald-600: #059669;
+  --emerald-500: #10b981;
+  --emerald-400: #34d399;
+  --emerald-300: #6ee7b7;
+  --emerald-200: #a7f3d0;
+  --emerald-100: #d1fae5;
+  --emerald-50: #ecfdf5;
+
+  --teal-600: #0d9488;
+  --teal-500: #14b8a6;
+  --teal-400: #2dd4bf;
+
+  /* Signature Green Gradients */
+  --gradient-hero: radial-gradient(circle at 18% 20%, #065f46 0%, #064e3b 42%, #022c22 100%);
+  --gradient-primary: linear-gradient(135deg, #059669 0%, #10b981 55%, #14b8a6 100%);
+  --gradient-primary-hover: linear-gradient(135deg, #047857 0%, #059669 55%, #0d9488 100%);
+  --gradient-surface: linear-gradient(180deg, #f3fcf7 0%, #ecfdf5 45%, #f8fafc 100%);
+  --gradient-text-mint: linear-gradient(135deg, #a7f3d0 0%, #34d399 50%, #5eead4 100%);
+
+  /* Neutrals */
+  --surface-white: #ffffff;
+  --surface-glass: rgba(255, 255, 255, 0.92);
+  --ink-900: #0f172a;
+  --ink-700: #334155;
+  --ink-500: #64748b;
+  --ink-400: #94a3b8;
+  --border-subtle: rgba(6, 78, 59, 0.11);
+  --border-emerald: rgba(16, 185, 129, 0.28);
+
+  /* Elevation & Shadows */
+  --shadow-xs: 0 1px 2px rgba(2, 44, 34, 0.05);
+  --shadow-sm: 0 4px 12px -2px rgba(2, 44, 34, 0.06);
+  --shadow-md: 0 12px 28px -6px rgba(2, 44, 34, 0.1);
+  --shadow-lg: 0 24px 48px -12px rgba(2, 44, 34, 0.16);
+  --shadow-emerald: 0 14px 32px -8px rgba(16, 185, 129, 0.32);
+
+  /* Framer-Inspired Spring Curves */
+  --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Radii */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+
+  /* Typography */
+  --font-display: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--ink-900);
+  background: var(--gradient-surface);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--emerald-500);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--emerald-500);
+  color: #ffffff;
+}
+
+/* Custom Green Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--emerald-50);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--emerald-500), var(--emerald-700));
+  border-radius: 999px;
+  border: 2px solid var(--emerald-50);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--emerald-400), var(--emerald-600));
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
